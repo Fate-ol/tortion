@@ -1,10 +1,8 @@
 @charset "utf-8";
 
-$tablet-max: 991px;
-$height-max: 1000px;
-$small: 767px;
-$normal-max: 1199px;
 $desktop-max: 1600px;
+$tablet-max: 991px;
+$small: 767px;
 
 $varela: "Varela Round", sans-serif;
 
@@ -181,7 +179,7 @@ h2, .h2 {
 
 .hide-mobile {
   @include respond-to(mobile) {
-    display: none;
+    display: none !important;
   }
 }
 .header-out {
@@ -468,7 +466,7 @@ h2, .h2 {
     flex-direction: column;
     grid-area: promo;
     background: #fff url("../img/promo.png") no-repeat center top / 100%;
-    border: #ff00ff 1px solid;
+    //border: #ff00ff 1px solid;
     
     @include respond-to(mobile) {
       min-height: 540px;
@@ -484,7 +482,7 @@ h2, .h2 {
     background: -webkit-linear-gradient(left,  #3d3d3d 0%,#293855 100%);
     background: linear-gradient(to right,  #3d3d3d 0%,#293855 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d3d3d', endColorstr='#293855',GradientType=1 );
-    border: #ff0000 1px solid;
+    //border: #ff0000 1px solid;
     @include respond-to(mobile) {
       background: transparent;
       filter: none;
@@ -493,7 +491,7 @@ h2, .h2 {
   &__promo-pic {
     position: relative;
     grid-area: promo-pic;
-    border: #00ff00 1px solid;
+    //border: #00ff00 1px solid;
   }
   &__promo-pic::before {
     content: '';
@@ -841,7 +839,6 @@ h2, .h2 {
     flex: 1 1 auto;
     min-width: 140px;
     text-align: center;
-
   }
   & .form-column-btn .btn {
     width: 100%;
@@ -863,18 +860,152 @@ h2, .h2 {
 .section-host-a-screening {
   background: #293855;
   color: #fff;
-
+  @include respond-to(mobile) {
+    background: #293855 url("../img/bg-host-a-screening.jpg") no-repeat center center / cover;
+  }
   & .section__form {
+    padding: 134px 88px 84px 88px;
+    background: url("../img/bg-host-a-screening.jpg") no-repeat center center / cover;
+
+    @include respond-to(desktop) {
+      padding: 134px 47px 84px 47px;
+    }
+    @media (max-width: 1200px) {
+      padding: 74px 20px 74px 20px;
+    }
+    @include respond-to(tablet) {
+      padding: 74px 20px 74px 20px;
+    }
+    @include respond-to(mobile) {
+      padding: 0px 20px 74px 20px;
+      background: transparent;
+    }
+    & p {
+      font-size: 24px;
+      text-transform: uppercase;
+    }
     
+    & .form-column {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 50px -13px -30px -13px;
+      @include respond-to(mobile) {
+        margin-top: 0;  
+      }
+
+    }
+    & .form-column > div {
+      padding: 0 13px 30px 13px;
+    }
+   
+    & .form-column-inp {
+      flex: 1 1 50%;
+      @media (max-width: 1200px){
+        flex: 1 1 100%;
+      }
+      @include respond-to(mobile) {
+        flex: 1 1 100%;
+      }
+    }
+    & .form-column-inp .inp {
+      width: 100%;
+    }
+    & .form-column-btn {
+      flex: 1 1 100%;
+      min-width: 140px;
+      text-align: center;
+      padding-top: 42px !important;
+    }
   }
 }
 
+.section-team {
+  & .section__content {
+    padding-top: 90px;
+    @include respond-to(tablet) {
+      padding-top: 70px;
+    }
+  }
+  & .section__col {
+    @include respond-to(tablet) {
+      flex: 1 1 100%;
+    }
+  }
 
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    padding: 70px 6% 90px 6%;
+    text-align: center;
+
+    @include respond-to(desktop) {
+      padding: 70px 6%;
+    }
+    @include respond-to(tablet) {
+      padding: 20px 20px 64px 20px;
+    }
+    @include respond-to(mobile) {
+      padding: 20px 20px 64px 20px;
+    }
+  }
+  &__text p:last-child {
+    margin-bottom: 0;
+  }
+  &__pic img {
+    max-width: 100%;
+  }
+  &__head {
+    margin: 76px 0 43px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #3D3D3D;
+
+    @include respond-to(tablet) {
+      margin: 46px 0 27px;
+    }
+  }
+}
+
+.section-contact {
+  background: #293855;
+  color: #fff;
+  text-align: center;
+  & a {
+    color: #fff;
+  }
+  & .section__content {
+    padding: 83px 20px 70px 20px;
+    @include respond-to(tablet) {
+      padding: 30px 20px 70px 20px;
+    }
+  }
+  &__text {
+    padding: 36px 0 58px;
+    @include respond-to(tablet) {
+      padding: 21px 0 43px;
+    }
+  }
+  &__text span {
+    @include respond-to(mobile) {
+      display: block;
+      padding: 15px 0;
+    }  
+  }
+  &__soz {
+    width: 100%;
+    max-width: 310px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}
 @include respond-to(desktop) {
 }
 @include respond-to(tablet) {
 }
 @include respond-to(mobile) {
 }
-//color: #ccac7a;
 
