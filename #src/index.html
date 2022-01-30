@@ -28,7 +28,7 @@
       </a>
     </div>
     <div class="header__nav">
-      <div class="main-menu">
+      <div class="main-menu" id="main-menu">
         <!-- open -->
         <a href="#" class="main-menu__ico">
           <span></span>
@@ -37,12 +37,12 @@
         <div class="main-menu__items">
           <div>
             <ul class="main-menu__ul">
-              <li><a href=""><span>About the film</span></a></li>
-              <li><a href=""><span>Trailer</span></a></li>
-              <li><a href=""><span>Press Kit</span></a></li>
-              <li><a href=""><span>Host a Screening</span></a></li>
-              <li><a href=""><span>Team</span></a></li>
-              <li><a href=""><span>Contact</span></a></li>
+              <li><a href="#about"><span>About the film</span></a></li>
+              <li><a href="#trailer"><span>Trailer</span></a></li>
+              <li><a href="#press-kit"><span>Press Kit</span></a></li>
+              <li><a href="#host-a-screening"><span>Host a Screening</span></a></li>
+              <li><a href="#team"><span>Team</span></a></li>
+              <li><a href="#contact"><span>Contact</span></a></li>
             </ul>
             <div class="main-menu__logo">
               <a href="/">
@@ -61,7 +61,31 @@
   <div class="section-main__content">
     <div class="section-main__promo">
       <div class="section-main__chat">
-        111
+        <div class="b-chat b-chat-animation">
+          <div class="chat chat-animation">
+            <div class="chat-item chat-right">
+              <div class="avatar"><img src="img/avatar-men.png" alt=""></div>
+              <div class="message">How old r u?</div>
+            </div>
+            <div class="chat-item chat-left">
+              <div class="avatar"><img src="img/avatar-girl.png" alt=""></div>
+              <div class="message">12- u?</div>
+            </div>
+            <div class="chat-item chat-right">
+              <div class="avatar"><img src="img/avatar-men.png" alt=""></div>
+              <div class="message">14! U r so pretty!</div>
+            </div>
+            <div class="chat-item chat-left">
+              <div class="avatar"><img src="img/avatar-girl.png" alt=""></div>
+              <div class="message">Thks :)</div>
+            </div>
+            <div class="chat-item chat-right">
+              <div class="avatar"><img src="img/avatar-men.png" alt=""></div>
+              <div class="message">I really like u!</div>
+            </div>
+          </div>  
+        </div>
+
       </div>
       <div class="section-main__about">
         <div class="section-main__slogan">
@@ -69,6 +93,7 @@
         </div>
         <div class="section-main__description">
           <div>
+            <a name="about" class="anchor"></a>
             <h2>About the film</h2>
             <div class="section-main__text">
               <p>“Sextortion” documentary is an expose into the world of online grooming and sextortion that is a present-day reality for 1 in 7 children online. By unsealing the HSI case of a top gun pilot with hundreds of victims, and interviewing survivors and their parents, this true-crime piece opens the eyes of the viewers as to how and why this cyber-crime against children is becoming pandemic. </p>
@@ -82,6 +107,7 @@
       <div class="section-main__info">
           <div class="section-main__info-one">GROOMED FILM PRESENTS AN AURORIS MEDIA PRODUCTION IN ASSOCIATION WITH SPOTLIGHT FILM FUND</div>
           <div class="section-main__info-two">SEXTORTION<br><span>the hidden pandemic</span></div>
+          <a name="trailer" class="anchor"></a>
           <div class="section-main__info-three"><a href="" class="btn btn_white">Watch the full trailer</a></div>
       </div>
       <div class="section-main__signature">
@@ -141,6 +167,8 @@
     </form>
   </div>
 </section>
+
+<a name="press-kit" class="anchor"></a>
 <section class="section section-press-kit">
   <div class="section__content">
     <div class="section__row">
@@ -160,6 +188,7 @@
   </div>
 </section>
 
+<a name="host-a-screening" class="anchor"></a>
 <section class="section section-host-a-screening">
   <div class="section__content">
     <div class="section__row">
@@ -188,6 +217,8 @@
     </div>
   </div>
 </section>
+
+<a name="team" class="anchor"></a>
 <section class="section section-team">
   <div class="section__content">
     <h2>Meet the team</h2>
@@ -211,6 +242,7 @@
   </div>
 </section>
   
+<a name="contact" class="anchor"></a>
 <section class="section section-contact">
   <div class="section__content">
     <h2 class="text-white">CONTACT US</h2>
@@ -229,9 +261,6 @@
 
 
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
 <script src="js/script.js"></script>
 
 </body>
