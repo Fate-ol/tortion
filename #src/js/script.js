@@ -33,4 +33,9 @@ $(document).ready(function() {
   //  return false;
   //});
 
+  $('.main-menu a[href*="#"]').click(function() {
+    //$('.main-menu').triggerHandler("click");
+    $('#main-menu').removeClass('open');
+  });
+
 });
