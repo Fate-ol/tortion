@@ -28,14 +28,21 @@ $(document).ready(function() {
     return false;
   });
 
-  //$('.main-menu__ul > li > a').click(function() {
-  //  $('#main-menu').removeClass('open');
-  //  return false;
-  //});
 
   $('.main-menu a[href*="#"]').click(function() {
-    //$('.main-menu').triggerHandler("click");
     $('#main-menu').removeClass('open');
   });
+
+
+	$('.quotes-slider').slick({
+		centerMode: true,
+		centerPadding: '0px',
+		slidesToShow: 1,
+    fade: true,
+    adaptiveHeight: true,
+    autoplaySpeed: 5000,
+	});
+
+
 
 });

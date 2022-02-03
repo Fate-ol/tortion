@@ -115,7 +115,7 @@ h2, .h2 {
   padding: 0;
 }
 
-.text-white, .text-white:hover {
+.text-white {
   color: #fff;
 }
 .btn {
@@ -165,21 +165,6 @@ h2, .h2 {
   padding: 0 20px;
   background: #FFFFFF;
   border: 1px solid rgba(0, 0, 0, 0.12);
-}
-.area {
-  height: 110px;
-  line-height: 1.44;
-  font-weight: 300;
-  font-size: 20px;
-  color: #293855;
-  padding: 20px 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  resize: none;
-  @include respond-to(mobile) {
-    height: 190px;
-  }
-  
 }
 .nowrap {
   white-space: nowrap;
@@ -734,7 +719,7 @@ h2, .h2 {
 
   &__signature {
     margin: 0 40px;
-    padding: 50px 10% 130px 10%;
+    padding: 50px 0 130px 0;
     border-top: #fff 1px solid;
     font-weight: 300;
     font-size: 17px;
@@ -932,36 +917,34 @@ h2, .h2 {
     background: #293855 url("../img/bg-host-a-screening.jpg") no-repeat center center / cover;
   }
   & .section__form {
-    padding: 53px 88px 96px 88px;
+    padding: 134px 88px 84px 88px;
     background: url("../img/bg-host-a-screening.jpg") no-repeat center center / cover;
 
     @include respond-to(desktop) {
-      padding: 53px 47px 96px 47px;
+      padding: 134px 47px 84px 47px;
     }
-    //@media (max-width: 1200px) {
-    //  padding: 74px 20px 74px 20px;
-    //}
+    @media (max-width: 1200px) {
+      padding: 74px 20px 74px 20px;
+    }
     @include respond-to(tablet) {
-      padding: 36px 20px 36px 20px;
+      padding: 74px 20px 74px 20px;
     }
     @include respond-to(mobile) {
-      padding: 36px 20px 36px 20px;
+      padding: 0px 20px 74px 20px;
       background: transparent;
     }
     & p {
-      display: none;
-      @include respond-to(mobile) {
-        display: block;
-      }
+      font-size: 24px;
+      text-transform: uppercase;
     }
     
     & .form-column {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      margin: 36px -13px -30px -13px;
+      margin: 50px -13px -30px -13px;
       @include respond-to(mobile) {
-        margin-top: 34px;  
+        margin-top: 0;  
       }
 
     }
@@ -981,19 +964,11 @@ h2, .h2 {
     & .form-column-inp .inp {
       width: 100%;
     }
-
-    & .form-column-area {
-      flex: 1 1 100%;
-    }
-    & .form-column-area textarea {
-      width: 100%;
-    }
-
     & .form-column-btn {
       flex: 1 1 100%;
       min-width: 140px;
       text-align: center;
-      padding-top: 12px !important;
+      padding-top: 42px !important;
     }
   }
 }
@@ -1165,125 +1140,46 @@ h2, .h2 {
   0.5% {
 		opacity: 0;
   }
-  28% {
+  29.9% {
     opacity: 0;
   }
-  28.1% {
-		opacity: 1;
-  }
-  100% {
-		opacity: 1;
-  }
-}
-.chat-animation {
-  animation: chat_anim 20s infinite linear;
-  transform: translate(0, 100%);
-}
-@keyframes chat_anim {
-	0% {
-		transform: translate(0, 100%);
-	}
-
-  4% {
-		transform: translate(0, 80%);
-  }
-  7.5% {
-		transform: translate(0, 80%);
-  }
-
-  10% {
-		transform: translate(0, 60%);
-  }
-  15% {
-		transform: translate(0, 60%);
-  }
-
-  17% {
-		transform: translate(0, 40%);
-  }
-  22.5% {
-		transform: translate(0, 40%);
-  }
-
-  25% {
-		transform: translate(0, 20%);
-  }
   30% {
-		transform: translate(0, 20%);
-  }
-
-  32.5% {
-		transform: translate(0, 0%);
-  }
-  37.5% {
-		transform: translate(0, 0%);
-  }
-
-  72% {
-		transform: translate(0, 0%);
+		opacity: 1;
   }
   100% {
-		transform: translate(0, 100%);
+		opacity: 1;
   }
 }
-
 .chat-animation .chat-item {
-  //order: 1;
+  order: 1;
   opacity: 0;
-  padding: 5px 0;
-  max-height: 300px;
   animation: chat-item_anim 20s infinite linear;
   animation-fill-mode: both;
-}
-.chat-animation .chat-item.chat-left {
-  transform-origin: top left;
-}
-.chat-animation .chat-item.chat-right {
-  transform-origin: top right;
 }
 @keyframes chat-item_anim {
 	0% {
 		opacity: 0;
-    //max-height: 300px;
-    //order: 1;
+    order: 1;
 	}
-  0.1% {
-    //order: 10;
-    //max-height: 0;
+  1% {
+    order: 10;
   }
   4% {
-    //max-height: 300px;
 		opacity: 0;
-    transform: scale(0.0);
-  }
-  5% {
-    //max-height: 300px;
-    transform: scale(1.05,1.05);
-		opacity: 1;
-  }
-  5.5% {
-    transform: scale(1,1);
-		opacity: 1;
   }
   6% {
-    transform: scale(1.01,1.01);
 		opacity: 1;
   }
-  6.5% {
-    transform: scale(1,1);
-		opacity: 1;
-  }
-  71.9% {
+  69.9% {
     opacity: 1;
   }
-  72% {
+  70% {
 		opacity: 0;
-    //order: 10;
+    order: 10;
 	}
 	100% {
-    //max-height: 300px;
 		opacity: 0;
-    //order: 1;
+    order: 1;
 	}
 }
 .chat-animation .chat-item:nth-child(1) {
@@ -1302,95 +1198,6 @@ h2, .h2 {
   animation-delay: 6s;
 }
 
-
-.section-quotes {
-  background: #293855;
-
-  & .section__content {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 50px 20px 90px 20px;
-
-    @include respond-to(tablet) {
-      padding: 34px 20px 46px 20px;
-    }
-  }
-  & h2 {
-    margin-bottom: 48px;
-    @include respond-to(tablet) {
-      margin-bottom: 34px;
-    }
-  }
-}
-
-.quotes-slide {
-  position: relative;
-		&__content {
-      position: relative;
-      max-width: 890px;
-      margin: 0 auto;
-      background: #fff;
-      text-align: center;
-      padding: 52px 4%;
-
-      @include respond-to(tablet) {
-        margin: 0 0px;
-        padding: 20px 20px;
-      }
-		}
-    &__content::after {
-      content: '';
-      position: absolute;
-      width: 64px;
-      height: 64px;
-      background: #fff;
-      transform: rotate(-45deg) translate(-50%,0);
-      transform-origin: center center;
-      bottom: 5px;
-      left: 50%;
-      z-index: -1;
-    }
-
-		&__signature {
-      padding: 52px 30px 0 30px;
-      color: #fff;
-      text-align: center;
-		}
-}
-.section-partners {
-  & .section__content {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 120px 20px 120px 20px;
-
-    @include respond-to(tablet) {
-      padding: 34px 20px 34px 20px;
-    }
-  }
-}
-.partners-iitems {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: -20px;
-  & > div {
-    flex: 1 1 0;
-    min-width: 200px;
-    padding: 20px;
-    text-align: center;
-    @include respond-to(mobile) {
-      flex: 1 1 100%;
-    }
-  }
-  & > div img {
-    max-width: 100%;
-    @include respond-to(mobile) {
-      max-width: 100%;
-    }
-  }
-}
 
 
 @include respond-to(desktop) {
